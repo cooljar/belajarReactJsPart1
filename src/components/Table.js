@@ -31,7 +31,7 @@ class Table extends React.Component {
             <div style={styles.container}>
             Baru Saja ditambahkan:
             <br></br>ID: <span></span>
-            <br></br>INSTANSI: <span></span>
+            <br></br>PROVINSI: <span></span>
             </div>
         </div>;
     }
