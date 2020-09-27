@@ -17,7 +17,7 @@ Masuk ke direktori project dengan menjalankan perintah berikut
 cd belajarReactJsPart1
 ```
 
-Memasang semua paket dependency
+Memasang semua paket dependency dengan menjalankan perintah berikut
 ```
 npm install
 ```
@@ -27,6 +27,7 @@ Jalankan perintah berikut untuk mulai menjalankan aplikasi
 ```
 npm start
 ```
+Buka browser dan ketikan alamat: localhost://3000
 
 ### Apa Yang Harus Diselesaikan Pada Latihan Ini
 - Ketika pertama kali dijalankan, table langsung berisi satu baris data (id=18, provinsi=Lampung).
