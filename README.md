@@ -27,7 +27,7 @@ Jalankan perintah berikut untuk mulai menjalankan aplikasi
 ```
 npm start
 ```
-Buka browser dan ketikan alamat: localhost://3000
+Buka browser dan ketikan alamat: http://localhost:3000
 
 ### Apa Yang Harus Diselesaikan Pada Latihan Ini
 - Ketika pertama kali dijalankan, table langsung berisi satu baris data (id=18, provinsi=Lampung).
