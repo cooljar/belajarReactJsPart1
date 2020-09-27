@@ -29,6 +29,9 @@ npm start
 ```
 Buka browser dan ketikan alamat: http://localhost:3000
 
+### Contoh Tampilan
+![Alt Text](ss.png)
+
 ### Apa Yang Harus Diselesaikan Pada Latihan Ini
 - Ketika pertama kali dijalankan, table langsung berisi satu baris data (id=18, provinsi=Lampung).
 - Ketika form di submit, data yang diinput otomatis menambah satu baris data pada table.
