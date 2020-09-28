@@ -51,7 +51,7 @@ class Table extends React.Component {
 
     render() {
         return <div className="body">
-            <h1 id='title'>{this.props.title}</h1>
+            <h1 id='title'>{this.props.judul}</h1>
             <table id='provinsis'>
                 <thead>
                     <tr>
