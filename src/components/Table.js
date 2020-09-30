@@ -23,8 +23,7 @@ class Table extends React.Component {
     }*/
     setId = (e) => {
         //console.log(this);
-        let data = {id: e.target.value, provinsi: this.state.addedProvinsi.provinsi};
-        this.setState({addedProvinsi: data});
+        this.setState({addedProvinsi: {id: e.target.value, provinsi: this.state.addedProvinsi.provinsi}});
     }
     
     setProvinsi(e){
@@ -41,7 +40,7 @@ class Table extends React.Component {
     }
 
     renderTableData() {
-        return this.state.provinsis.map((provinsiData, index) => {
+        /*return this.state.provinsis.map((provinsiData, index) => {
             const { id, provinsi } = provinsiData //destructuring
             return (
                 <tr key={id}>
@@ -49,10 +48,21 @@ class Table extends React.Component {
                     <td>{provinsi}</td>
                 </tr>
             )
+        })*/
+
+        let baris = [];
+        this.state.provinsis.forEach(provinsiObject => {
+            const { id, provinsi } = provinsiObject //destructuring
+            baris.push(<tr key={id}>
+                <td>{id}</td>
+                <td>{provinsi}</td>
+            </tr>);
         })
+        return baris;
     }
 
     render() {
+        console.log(this.renderTableData());
         return <div className="body">
             <h1 id='title'>{this.props.judul}</h1>
             <table id='provinsis'>
