@@ -5,14 +5,10 @@ class Table extends React.Component {
         super(props);
         this.state = {
             provinsis: [
-                {
-                    id: '18',
-                    provinsi: 'Lampung'
-                }
+                {id: '18', provinsi: 'Lampung'},
+                {id: '19', provinsi: 'Sumatera Barat'}
             ],
             addedProvinsi: {id: '18', provinsi: 'Lampung'},
-            newId: "",
-            newProvinsi: ""
         };
 
         // Binding method
@@ -34,16 +30,18 @@ class Table extends React.Component {
     }
 
     setId(e){
-        this.setState({newId: e.target.value});
+        let data = {id: e.target.value, provinsi: this.state.addedProvinsi.provinsi};
+        this.setState({addedProvinsi: data});
     }
 
     setProvinsi(e){
-        this.setState({newProvinsi: e.target.value});
+        let data = {id: this.state.addedProvinsi.id, provinsi: e.target.value};
+        this.setState({addedProvinsi: data});
     }
 
     tambahData(){
         let sts = this.state.provinsis;
-        let st = {"id":this.state.newId, "provinsi":this.state.newProvinsi};
+        let st = {"id":this.state.addedProvinsi.id, "provinsi":this.state.addedProvinsi.provinsi};
         sts.push(st);
         this.setState({provinsis: sts});
         this.setState({addedProvinsi: st});
