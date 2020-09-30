@@ -12,9 +12,32 @@ class Table extends React.Component {
         };
 
         // Binding method
-        this.setId = this.setId.bind(this);
+        //this.setId = this.setId.bind(this);
         this.setProvinsi = this.setProvinsi.bind(this);
         this.tambahData = this.tambahData.bind(this);
+    }
+
+    /*setId(e){
+        let data = {id: e.target.value, provinsi: this.state.addedProvinsi.provinsi};
+        this.setState({addedProvinsi: data});
+    }*/
+    setId = (e) => {
+        //console.log(this);
+        let data = {id: e.target.value, provinsi: this.state.addedProvinsi.provinsi};
+        this.setState({addedProvinsi: data});
+    }
+    
+    setProvinsi(e){
+        let data = {id: this.state.addedProvinsi.id, provinsi: e.target.value};
+        this.setState({addedProvinsi: data});
+    }
+
+    tambahData(){
+        let sts = this.state.provinsis;
+        let st = {"id":this.state.addedProvinsi.id, "provinsi":this.state.addedProvinsi.provinsi};
+        sts.push(st);
+        this.setState({provinsis: sts});
+        this.setState({addedProvinsi: st});
     }
 
     renderTableData() {
@@ -27,24 +50,6 @@ class Table extends React.Component {
                 </tr>
             )
         })
-    }
-
-    setId(e){
-        let data = {id: e.target.value, provinsi: this.state.addedProvinsi.provinsi};
-        this.setState({addedProvinsi: data});
-    }
-
-    setProvinsi(e){
-        let data = {id: this.state.addedProvinsi.id, provinsi: e.target.value};
-        this.setState({addedProvinsi: data});
-    }
-
-    tambahData(){
-        let sts = this.state.provinsis;
-        let st = {"id":this.state.addedProvinsi.id, "provinsi":this.state.addedProvinsi.provinsi};
-        sts.push(st);
-        this.setState({provinsis: sts});
-        this.setState({addedProvinsi: st});
     }
 
     render() {
